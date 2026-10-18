@@ -32,3 +32,8 @@ patient_obj = new_patient(**patient_data)
 print(patient_obj.address.street)  # Output: 123 Main St
 print(patient_obj.address.city)    # Output: Anytown
 print(patient_obj.address.pin_code) # Output: 12345
+
+
+
+temp = patient_obj.model_dump(include={"name", "age", "address"})
+print(temp) 
